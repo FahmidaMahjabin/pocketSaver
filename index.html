@@ -16,41 +16,44 @@
       </header>
       <main>
           <section class = "container">
-              <div class = "row">
+              <div class = "row mb-5">
                   <!-- image section -->
-                  <div class = "col-6 g-5 col-12-sm">
+                  <div class = "col-6-md g-5 col-12-sm">
                       <img src = "images/money tree.jpg" class = "img-fluid">
                   </div>
                   <!-- calculate section -->
-                  <div class = "col-6 g-5 col-12-sm">
+                  <div class = "col-6-md g-5 col-12-sm bg-dark text-light">
                       
                       <form>
                         <!-- Income  -->
                         <h2 class = "text-center">Income</h2>
-                        <div class = "input-group">
+                        <div class = "input-group my-2">
                             <label for="income" class = "input-group-text">Income:</label>
                             <input id = "income" class = "form-control">
                         </div>
                         <!-- Expenses -->
                         <h2 class = "text-center">Expenses</h2>
-                        <div class = "input-group my-5">
+                        <div class = "input-group my-2">
                             <label for="food" class = "input-group-text">Food:</label>
                             <input id = "food" class = "form-control">
                         </div>
 
-                        <div class = "input-group my-5">
+                        <div class = "input-group my-2">
                             <label for="rent" class = "input-group-text">Rent:</label>
                             <input id = "rent" class = "form-control">
                         </div>
 
-                        <div class = "input-group my-5">
+                        <div class = "input-group my-2">
                             <label for="clothes" class = "input-group-text">Clothes:</label>
                             <input id = "clothes" class = "form-control">
                         </div>
                         <!-- button -->
-                        <button class=" btn btn-primary" onclick="showExpensesAndBalance()" type = "button">Calculate</button>
+                        <div class = "d-flex justify-content-center align-items-center my-2">
+                            <button class=" btn btn-primary" onclick="showExpensesAndBalance()" type = "button">Calculate</button>
+                        </div>
+                        
                         <!-- total expenses section -->
-                        <div class = "">
+                        <div class = "text-center">
                             <h3>Total Expenses:<sapn id = "expenses"></sapn></h3>
                             <h3>Balance:<span id = "balance"></span></h3>
                         </div>
@@ -58,12 +61,12 @@
                         <div class = "input-group">
                             <label class = "input-group-text">Save:</label>
                             <input class = "form-control">
-                            <label>%</label>
+                            <label class = "px-5 border border-white">%</label>
                             <button type = "button" class = "btn btn-primary">Save</button>
                         </div>   
                       </form>
                       <!-- show the savings section -->
-                      <div>
+                      <div class = "text-center my-2">
                           <h3>Saving Amount:<span id = "savings"></span></h3>
                           <h3>Remaining Balance:<span id = "remaining"></span></h3>
                       </div>

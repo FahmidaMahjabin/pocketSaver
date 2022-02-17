@@ -16,18 +16,21 @@ function getTotalExpenses(){
     const foodCost = getInputValue("food", event);
     const rentCost = getInputValue("rent", event);
     const clothesCost = getInputValue("clothes", event);
-    const totalExpenses = foodCost + rentCost + clothesCost;
+    const totalExpenses = parseFloat(foodCost) + parseFloat(rentCost) + parseFloat(clothesCost);
     return totalExpenses;
 }
 
 // function = show expenses and balances 
 function showExpensesAndBalance(){
-    const income = getInputValue("income", event);
+    const income = parseFloat(getInputValue("income", event));
+    console.log(income)
     const expenses = getTotalExpenses();
+    console.log(expenses)
     const remaining = income - expenses; 
     if (remaining >= 0 ){
         document.getElementById("expenses").innerText = expenses;
         document.getElementById("balance").innerText = remaining;
+        
 
     }
     else{
