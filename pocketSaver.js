@@ -54,3 +54,36 @@ function showExpensesAndBalance(event){
     
 
 }
+
+// function = get the saving amount 
+// step1:saving id er element e jei input dibo tar parcent diye income k multiply korbo 
+// case1: input > 0 hote hobe 
+// case2:saving can't be greater than (income - expenses)
+function getSavings(){
+    const savingPercentageStr = document.getElementById("saving").value;
+    const savingPercentageFloat = parseFloat(savingPercentageStr);
+    if (savingPercentageFloat > 0){
+        const income = getInputValue("income");
+        if (income > 0){
+            console.log(income);
+            const saving = income * savingPercentageFloat / 100;
+            return saving;
+        }
+        
+    }
+}
+
+// function = get remaining 
+// remaining = income - (expenses + saving) 
+// case1: remaining cant be negative 
+function getRemaining(){
+    const income = getInputValue("income");
+    const expenses = getTotalExpenses();
+    const saving = getSavings();
+    const remaining = income - (expenses + saving);
+    if (remaining >= 0){
+        return remaining;
+    }
+}
+
+
