@@ -46,9 +46,9 @@ function showExpensesAndBalance(event){
             document.getElementById("expensesSection").style.display = "block";
             document.getElementById("alertSection").style.display = "none";
         }
-        else{
-            showAlert("expenses")
-        }
+        // else{
+        //     showAlert("expenses")
+        // }
 
     }
     
