@@ -4,3 +4,8 @@
 #expensesSection{
     display: none;
 }
+#alert{
+    padding: 10px;
+    background-color: red;
+    display: none;
+}

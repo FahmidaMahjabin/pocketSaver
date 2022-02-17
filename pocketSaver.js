@@ -85,5 +85,22 @@ function getRemaining(){
         return remaining;
     }
 }
+// add saving and remaining to html 
+function showSavingandRemainingToHTML(){
+    const saving = getSavings();
+    const remaining = getRemaining();
+    if (saving >= 0 && remaining >= 0){
+        document.getElementById("savings").innerText = saving;
+        document.getElementById("remaining").innerText = remaining;
+        document.getElementById("alert").style.display = "none";
+    }
+    else{
+        const alert = document.getElementById("alert")
+        alert.innerText = "saving can't be more then expenses";
+        alert.style.display = "block";
+        document.getElementById("savingSection").style.display = "none";
+
+    }
+}
 
 

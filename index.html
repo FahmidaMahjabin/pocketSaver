@@ -22,7 +22,7 @@
                       <img src = "images/money tree.jpg" class = "img-fluid">
                   </div>
                   <!-- calculate section -->
-                  <div class = " bg-dark text-light">
+                  <div id = "formSection" class = " bg-dark text-light">
                       
                       <form>
                         <!-- Income  -->
@@ -69,14 +69,15 @@
                             <label class = "input-group-text">Save:</label>
                             <input id = "saving" class = "form-control">
                             <label class = "px-5 border border-white">%</label>
-                            <button  id = "saveBtn" type = "button" class = "btn btn-primary">Save</button>
+                            <button  id = "saveBtn" type = "button" onclick = "showSavingandRemainingToHTML()" class = "btn btn-primary">Save</button>
                         </div>   
                       </form>
                       <!-- show the savings section -->
-                      <div class = "text-center my-2">
+                      <div id = "savingSection" class = "text-center my-2">
                           <h3>Saving Amount:<span id = "savings"></span></h3>
                           <h3>Remaining Balance:<span id = "remaining"></span></h3>
                       </div>
+                      <p id = "alert"></p>
                   </div>
 
               </div>
