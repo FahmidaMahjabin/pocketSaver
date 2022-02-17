@@ -21,19 +21,24 @@ function getTotalExpenses(){
 }
 
 // function = show expenses and balances 
-function showExpensesAndBalance(){
+function showExpensesAndBalance(event){
     const income = parseFloat(getInputValue("income", event));
     console.log(income)
     const expenses = getTotalExpenses();
     console.log(expenses)
     const remaining = income - expenses; 
     if (remaining >= 0 ){
+        
         document.getElementById("expenses").innerText = expenses;
         document.getElementById("balance").innerText = remaining;
-        
+        document.getElementById("expensesSection").style.display = "block";
+
 
     }
     else{
+        console.log(event.target.getAttribute("id"))
+        document.getElementById("alert-message").innerText = `${event.target.id} is not valid. Please enter valid number. `
+        document.getElementById("alertSection").style.display = "block";
         console.log("not valied input")
     }
 

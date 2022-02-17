@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS v5.0.2 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
       <header>
@@ -16,13 +16,13 @@
       </header>
       <main>
           <section class = "container">
-              <div class = "row mb-5">
+              <div class = "row row-cols-1 row-cols-md-2 g-2 mb-5">
                   <!-- image section -->
-                  <div class = "col-6-md g-5 col-12-sm">
+                  <div class = "">
                       <img src = "images/money tree.jpg" class = "img-fluid">
                   </div>
                   <!-- calculate section -->
-                  <div class = "col-6-md g-5 col-12-sm bg-dark text-light">
+                  <div class = " bg-dark text-light">
                       
                       <form>
                         <!-- Income  -->
@@ -49,11 +49,18 @@
                         </div>
                         <!-- button -->
                         <div class = "d-flex justify-content-center align-items-center my-2">
-                            <button class=" btn btn-primary" onclick="showExpensesAndBalance()" type = "button">Calculate</button>
+                            <button class=" btn btn-primary" onclick="showExpensesAndBalance(event)" type = "button">Calculate</button>
+                        </div>
+                        <!-- alert section -->
+                        <div id = "alertSection"  class="alert alert-danger" role="alert">
+                            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                            <div id = "alert-message">
+                              
+                            </div>
                         </div>
                         
                         <!-- total expenses section -->
-                        <div class = "text-center">
+                        <div id = "expensesSection" class = "text-center">
                             <h3>Total Expenses:<sapn id = "expenses"></sapn></h3>
                             <h3>Balance:<span id = "balance"></span></h3>
                         </div>
